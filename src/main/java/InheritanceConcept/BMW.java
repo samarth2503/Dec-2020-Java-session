@@ -8,8 +8,8 @@ package InheritanceConcept;
 
 public class BMW extends Car {
 	
-	@Override
-	public void start()
+	
+	public static void start()
 	{
 		System.out.println("BMW---start");
 	}

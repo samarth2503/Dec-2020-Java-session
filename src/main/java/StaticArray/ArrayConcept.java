@@ -73,20 +73,20 @@ public class ArrayConcept {
 		
 		//char Array
 		
-		char[] c = new char[5];
+		char[] c1 = new char[5];
 		
-		c[0]='a';
-		c[1]='b';
-		c[2]='c';
+		c1[0]='a';
+		c1[1]='b';
+		c1[2]='c';
 		
-		System.out.println("Character is "+c[4]);
+		System.out.println("Character is "+c1[4]);
 		
-		for(int x=0;x<c.length;x++)
+		for(int x=0;x<c1.length;x++)
 		{
-			System.out.println("Index "+x+" has value "+c[x]);
+			System.out.println("Index "+x+" has value "+c1[x]);
 		}
 		
-		for(char ch : c)
+		for(char ch : c1)
 		{
 			System.out.println(ch);
 		}

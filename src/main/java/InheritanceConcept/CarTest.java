@@ -6,7 +6,7 @@ public class CarTest {								// Vechile GrandParent and Car Parent
 		
 		BMW b = new BMW();
 		
-		b.start();				// Overriden from Parent class
+		Car.start();				// Overriden from Parent class
 		b.autoParking();        // BMW class method
 		b.refuel();				// Car class Method
 		b.stop();				// Car class methdo

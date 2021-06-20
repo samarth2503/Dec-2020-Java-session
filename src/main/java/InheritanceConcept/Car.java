@@ -2,7 +2,7 @@ package InheritanceConcept;
 
 public class Car extends Vechile{							// final class cannot be parent class
 	
-	public void start()										// cannot be overriden if Final
+	public static void start()										// cannot be overriden if Final
 	{
 		System.out.println("Car--Start");
 	}

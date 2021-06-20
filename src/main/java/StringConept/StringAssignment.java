@@ -61,11 +61,11 @@ public class StringAssignment {
 		System.out.println(second);
 		
 		
-		// To fetch index of 3rd 'i'
+		// To fetch index of 3rd 'e'
 		
 		String exp = "Welcome to Naveen Automation labs";
 		
-			exp.indexOf('e',exp.indexOf('e',exp.substring(exp.indexOf('e')+1)));
+		
 	}
 
 }
