@@ -1,16 +1,11 @@
 package InheritanceConcept;
 
-public class Audi extends Car{									// Car is PArent Audi is child
+public class Audi {
 	
-	@Override
-	public void start()
+	public void engine()
 	{
-		System.out.println("Audi---start");
+		System.out.println("Engine....");
 	}
 	
-	public void theftSafety()
-	{
-		System.out.println("Audi---theftSafety");
-	}
-
+	
 }
