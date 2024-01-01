@@ -1,7 +1,9 @@
 package ExceptionHandlingconcept;
 
-public class ThrowsKeyword {
+// It is a bad practice to throws Exception from one method to another method.
 
+public class ThrowsKeyword {
+	
 	public void m1() throws ArithmeticException
 	{
 		System.out.println("m1");
@@ -23,12 +25,13 @@ public class ThrowsKeyword {
 	public void m4() throws ArithmeticException
 	{
 		System.out.println("m4");
-		int a =9/0;
+		
+		int i = 9/0;
 	}
-	
+
 	public static void main(String[] args) throws ArithmeticException
 	{
-		ThrowsKeyword th = new ThrowsKeyword();							// To call instnce method inside static method we need to crate using object
-		th.m1();														
+		ThrowsKeyword th = new ThrowsKeyword();
+		th.m4();
 	}
 }

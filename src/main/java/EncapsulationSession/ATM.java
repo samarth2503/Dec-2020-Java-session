@@ -2,61 +2,61 @@ package EncapsulationSession;
 
 public class ATM {
 	
-	private double curr_bal=2000;
-	private final double min_bal=500;
+	private double cur_bal = 20000;
+	private double min_bal = 500;
 	
-	public ATM(double amt)
-	{
-		fetchCash(amt);
+	public double getCur_bal() {
+		return cur_bal;
+	}
+
+
+	public void setCur_bal(double cur_bal) {
+		this.cur_bal = cur_bal;
+	}
+
+
+	public double getMin_bal() {
+		return min_bal;
+	}
+
+
+	public void setMin_bal(double min_bal) {
+		this.min_bal = min_bal;
 	}
 	
-	public ATM()
+	public void getFetchCash(double amount)
 	{
-		
+		fetchCash(amount);
 	}
-	
-	public double getCurrentbalance()
-	{
-		return curr_bal;
-	}
-	
-	public void setBalance(double bal)
-	{
-		this.curr_bal=bal;
-	}
-	
-	public double getBalance()
-	{
-		return curr_bal;
-	}
-	
 	
 	private void fetchCash(double amount)
 	{
-		if(amount>curr_bal)
+		if(amount>cur_bal)
 		{
-			System.out.print("You dont have sufficent balance.");
-			setBalance(curr_bal);
+			System.out.println("You don't have sufficent cash to withdraw...Please enter denomination less than : "+cur_bal);
 		}
-		else if(amount<curr_bal && amount>min_bal)
+		else if(amount<cur_bal && amount>min_bal)
 		{
-			curr_bal=curr_bal-amount;
-			System.out.println("Fetching cash....");
-			System.out.print("Your Current Balance is "+curr_bal);
-			setBalance(curr_bal);
+			cur_bal = cur_bal - amount;
+			setCur_bal(cur_bal);
+			if(cur_bal<=500)
+			{
+				System.out.println("Please maintain minimum balance of Rs 500 in your account..Deposit Rs "+(500-cur_bal)+" in your account to maintain balance..");
+			}
+			
+			System.out.println("Your withdrawl is successful....");
 		}
-		else if(curr_bal<=min_bal)
-		{
-			System.out.print("You cant withdraw the cash.Minium balance should be Rs. "+min_bal+" ");
-			setBalance(curr_bal);
+		else {
+			System.out.println("Please maintain minimum balance of Rs 500 in your account..");
 		}
 		
-		//return curr_bal;
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+
+	public static void main(String[] args)
+	{
+		
 	}
 
 }

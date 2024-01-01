@@ -1,5 +1,6 @@
 package BuilderPatternConcept;
 
+// We can't do verification in builder pattern it's the disadvantages of 
 public class EcommApp {
 	
 	public EcommApp doLogin()

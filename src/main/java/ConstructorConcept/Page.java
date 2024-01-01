@@ -24,7 +24,7 @@ public class Page {
 	{
 		System.out.println("Launch");
 		header();
-		t1();										// Static methdod can be called inside non-static method as it is common to all and freely accessable
+		t1();										// Static method can be called inside non-static method as it is common to all and freely accessable
 	}
 	
 	public void header()

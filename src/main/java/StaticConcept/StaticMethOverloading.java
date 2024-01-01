@@ -20,6 +20,7 @@ public class StaticMethOverloading {
 	public static void test(String s,int i)
 	{
 		System.out.println("String and int variable");
+		
 	}
 	
 	public static void main(String[] args)

@@ -7,5 +7,7 @@ public interface UKMedical {
 	public void entServices();
 	
 	public void gynecServices();
+	
+	public void sam();
 
 }

@@ -9,36 +9,38 @@ package ConstructorConcept;
 public class Student {
 	
 	String name;
-	int rollNumber;
-	String standard;
-	boolean isActive;
-	String city;
+	int studId;
+	int a;
 	
 	public Student()
 	{
-		System.out.println("Default Constructor");
-	}
-	
-	public Student(String name)
-	{
-		System.out.println("One param "+name);
-	}
-	
-	public String getName()
-	{
-		return name;
+		System.out.println("Inside Default Constructor....");
 	}
 	
 	public Student(int a)
 	{
-		System.out.println("One param "+a);
+		this.studId = a;
+		System.out.println("Value of a is "+a);
+	}
+	
+	public Student(String name)
+	{
+		this.name= name;
+		System.out.println("Name of Student is "+name);
+	}
+	
+	public Student(String name,int studId)
+	{
+		this.name = name;
+		this.studId = studId;
 	}
 	
 	public static void main(String[] args)
 	{
-		Student stu = new Student("Samarth");
-		System.out.println(stu.name+" "+stu.rollNumber);
-		stu.getName();
+		Student s = new Student("Samarth",78);
+		System.out.println("Student name is "+s.name+" and Student Id is "+s.studId);
 	}
+	
+	
 
 }

@@ -8,18 +8,20 @@ public class LoginPage extends Page{
 	}
 
 	@Override
-	public void title() {
-		System.out.println("LoginPage title");
-	}
-
-	@Override
-	public void haeder() {
-		System.out.println("LoginPage Header");
-	}
-
-	@Override
 	public void url() {
 		System.out.println("LoginPage Url");
+	}
+
+	@Override
+	public void pageTitle() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void header() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

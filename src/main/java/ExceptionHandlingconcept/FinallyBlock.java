@@ -33,37 +33,32 @@ public class FinallyBlock {
 	@SuppressWarnings("finally")
 	public static int getMarks(String name)
 	{
-		
 		if(name.equals("Sonam"))
 		{
-			return 95;
+			return 90;
 		}
 		else if(name.equals("Tom"))
 		{
 			try {
 				int a = 9/3;
+				return 12;
+			}
+			catch(ArithmeticException e)
+			{
+				System.out.println("Inside catch Method ..");
 				return 45;
+				//e.printStackTrace();
 			}
-			catch(Exception e)
-			{
-				System.out.println("Some Exception occured");
-				return 15;
-			}
-			
-			finally
-			{
-				System.out.println("Inside Finally");
+			finally {
+				System.out.println("Finally Method...");
 				return 10;
 			}
 		}
-		else if(name.equals("Rahul"))
+		else if(name.equals("Sujan"))
 		{
 			return 95;
 		}
-		else
-		{
-			return -1;
-		}
+		return -1;
 	}
 
 }

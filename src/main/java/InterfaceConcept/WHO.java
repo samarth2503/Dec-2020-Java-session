@@ -1,6 +1,6 @@
 package InterfaceConcept;
 
-public interface WHO {
+public interface WHO  {
 	
 	public void covidTest();
 

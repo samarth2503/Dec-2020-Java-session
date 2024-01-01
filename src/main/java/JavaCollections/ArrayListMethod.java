@@ -10,6 +10,8 @@ public class ArrayListMethod {
 	public static void main(String[] args)
 	{
 		
+		// Array list works on Physical Capacity not on virtual capacity
+		// Default Virtual capacity for Array list is 10
 		ArrayList<String> al = new ArrayList<String>();
 		
 		al.add("Java");
@@ -17,9 +19,10 @@ public class ArrayListMethod {
 		al.add("Python");
 		al.add("Ruby");
 		
+		
 		System.out.println("Language are "+al);
 		
-		al.set(2, "JavaScript");												// Update the specfic location
+		al.set(2, "JavaScript");												// Update the specific location
 		
 		System.out.println("Updated Lanuages are "+al);
 		
@@ -27,7 +30,7 @@ public class ArrayListMethod {
 		al.add(null);
 		al.add("Ruby");
 		
-		System.out.println(al);													// we can add null and duplicate values also
+		System.out.println(al);													// We can add null and duplicate values also
 		
 		
 		// To print values from ArrayList using ListIterator
@@ -85,7 +88,7 @@ public class ArrayListMethod {
 		// Empty the ArrayList
 		
 		al.clear();
-		System.out.println(al);
+		System.out.println("Clear Array list : "+al);
 		
 		
 		// How to make ArrayList read only
@@ -97,7 +100,7 @@ public class ArrayListMethod {
 		fruitList1.add("Chickoo");
 		fruitList1.add("Banana");
 		
-		List<String> unmodiyfable = Collections.unmodifiableList(fruitList1);					// we can add,remove or update element in List
+		List<String> unmodiyfable = Collections.unmodifiableList(fruitList1);					// we can't add,remove or update element in List
 		
 		try {
 			unmodiyfable.add("Papaya");
@@ -152,9 +155,10 @@ public class ArrayListMethod {
 		secondlist.add("Papaya");
 		secondlist.add("Peach");
 		
-		firstlist.removeAll(secondlist);							// Removes all the element of secondlist and print the element of firstlsit which does not match element in secondlist
+		firstlist.removeAll(secondlist);							// Removes all the element from first list which matches in second list and print the element of first list which does not match element in second list
 		
 		System.out.println(firstlist);
+		System.out.println(secondlist);
 		
 		// 3> retainAll method
 		

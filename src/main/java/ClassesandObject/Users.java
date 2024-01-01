@@ -5,33 +5,27 @@ import java.util.ArrayList;
 public class Users {
 	
 	String name;
-	String[] devicelist;
-	int id;
-	ArrayList<String> orderhistory;
+	int id ;
+	String deviceList[];
+	ArrayList<String> orderHistroy;
 	
-	public static void main(String [] args)
+	public static void main(String[] args)
 	{
 		Users u1 = new Users();
 		
-		u1.name="Peter";
-		u1.id = 1002;
-		u1.devicelist = new String[3];
+		u1.name = "Samarth";
+		u1.id = 101;
+		u1.deviceList = new String[2];
 		
-		u1.devicelist[0]="Apple iPhoneX";
-		u1.devicelist[1]="Samsung X";
-		u1.devicelist[2]="One plus 5";
+		u1.deviceList[0] = "Samsung Galaxy 800";
+		u1.deviceList[1] = "Apple 15";
 		
-		u1.orderhistory= new ArrayList<String>();
+		u1.orderHistroy = new ArrayList<String>();
 		
-		u1.orderhistory.add("T Shirt");
-		u1.orderhistory.add("Nike Shoes 2020");
-		u1.orderhistory.add("Monitor 2019");
+		u1.orderHistroy.add("Nike shoes");
+		u1.orderHistroy.add("Yoga Mat");
 		
-		for(String e : u1.orderhistory)
-		{
-			System.out.println(e);
-		}
-		
+		System.out.println(u1.name+" "+u1.id+" "+u1.deviceList[0]+" "+u1.orderHistroy);
 	}
 
 }

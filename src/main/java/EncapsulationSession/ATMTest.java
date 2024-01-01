@@ -13,7 +13,13 @@ public class ATMTest {
 		// To check only CurrentBalance
 		
 		ATM at1 = new ATM();
-		System.out.println("Current balance "+at1.getCurrentbalance());
+		System.out.println("Current balance "+at1.getCur_bal());
+		
+		System.out.println("Current balance before cash withdrawl is :"+at1.getCur_bal());
+		at1.getFetchCash(19700);
+		
+		double balance = at1.getCur_bal();
+		System.out.println("Current balance after cash withdrawl is "+balance);
 
 	}
 

@@ -2,13 +2,13 @@ package InterfaceConcept;
 
 public interface USMedical {
 	
+	// By Default variable are static and final
 	int min_fee=100;
 	
-	// By Default variable are static and final
 	// No Method Body
-	// Only Method Decalartion
+	// Only Method Declaration
 	// Only Prototype
-	// It contains Abstract Methods
+	// It contains Abstract Methods  -- No Method body
 	// It is just used to create blueprint or prototype and implementation is provided by child class
 	// We cannot create Object of Interface
 	// No constructor inside interface as we have dont create Object of Interface

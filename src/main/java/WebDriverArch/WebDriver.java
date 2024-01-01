@@ -10,7 +10,11 @@ public interface WebDriver extends SearchContext{
 	
 	public void click();
 	
-	public void get();
+	public void get(String url);
+	
+	public String getTitle();
+	
+	public void sendKeys();
 	
 	@Override
 	public void findElements(String path);

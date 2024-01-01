@@ -1,6 +1,6 @@
 package InterfaceConcept;
 
-public class Fortishospital implements USMedical,IndianMedical {
+public class Fortishospital extends CentralHospital implements USMedical,IndianMedical  {
 
 	public void pediaServices() {
 		
@@ -12,7 +12,7 @@ public class Fortishospital implements USMedical,IndianMedical {
 		System.out.println("Fortis hospital---Cardio Servcies");
 	}
 
-	public void physioServcies() {															// We will override once if services is avialble 2 times
+	public void physioServcies() {															// We will override once if services is available 2 times
 		
 		System.out.println("Fortis hospital---Physio Servcies");
 	}
@@ -56,6 +56,19 @@ public class Fortishospital implements USMedical,IndianMedical {
 
 	@Override
 	public void opthoServices() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void covidTest() {
+		
+		System.out.println("FH -- covid19Test");
+		
+	}
+
+	@Override
+	public void HealthFund() {
 		// TODO Auto-generated method stub
 		
 	}

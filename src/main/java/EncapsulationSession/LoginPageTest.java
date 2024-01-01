@@ -11,15 +11,15 @@ public class LoginPageTest {
 		
 		LoginPage lp_cust = new LoginPage("Customer@gmail.com","Customer@123");
 		
-//		lp_cust.setPassword("samarth@gamil.com");									// For different user we were using same Object to Login.( first Approach)
-//		lp_cust.setPassword("Samarth@123");
-//		
-//		lp_cust.doLogin(lp_cust.getUsername(), lp_cust.getPassword());
-//		
-//		lp_cust.setUsername("sellar@gmail.com");
-//		lp_cust.setPassword("sellar@789");
-//		
-//		lp.doLogin(lp.getUsername(), lp.getPassword());
+		lp_cust.setPassword("samarth@gamil.com");									// For different user we were using same Object to Login.( first Approach)
+		lp_cust.setPassword("Samarth@123");
+		
+		lp_cust.doLogin(lp_cust.getUsername(), lp_cust.getPassword());
+		
+		lp_cust.setUsername("sellar@gmail.com");
+		lp_cust.setPassword("sellar@789");
+		
+		//lp.doLogin(lp.getUsername(), lp.getPassword());
 		
 		LoginPage lp_seller = new LoginPage();											// 2nd Approach using different object for different user
 		
@@ -27,10 +27,10 @@ public class LoginPageTest {
 		lp_seller.setUsername("sellar123@gmail.com");
 		
 		
-		LoginPage lp = new LoginPage();												// Third Approach.... Using Default Constructor
+		LoginPage lp = new LoginPage("Samarth890@gmail.com","Sam@1234");					// Third Approach.... Using Default Constructor
 		
-		lp.setUsername("Samarth890@gmail.com");
-		lp.setPassword("Sam@1234");
+//		lp.setUsername("Samarth890@gmail.com");
+//		lp.setPassword("Sam@1234");
 		
 		lp.doLogin(lp.getUsername(), lp.getPassword());
 	}

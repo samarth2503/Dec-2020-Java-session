@@ -27,7 +27,5 @@ public class MainMethOverLoading {
 	{
 		System.out.println("Main Method will 1 Integer "+c);
 	}
-	
-	
 
 }

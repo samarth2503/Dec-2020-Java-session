@@ -4,12 +4,12 @@
  * Negative indexing not possible in array
  * Lowest index is always 0 in array
  * 
- *  Array should be used when the dat is fixed. Eg:- No.of days in week,month.
+ *  Array should be used when the date is fixed. Eg:- No.of days in week,month.
  *  
  *  Default value for int,byte,short,long is 0
- *  Defaut value is Double,float 0.0
+ *  Default value is Double,float 0.0
  *  Default value is String,Object it is null
- *  Default value is Charcter is space
+ *  Default value is Character is space
  *  Default value or boolean is false
  *  
  *  
@@ -17,18 +17,28 @@
 
 package StaticArray;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
 public class ArrayConcept {
 	
 	public static void main(String[] args)
 	{
-		int a[] = new int[4];										// declaration,instantiation is done in this line
+		// Similar type of data in Array
+		// Array size is fixed -- static
+		// Can't increase the size at runtime
 		
-		a[0]=23;													// initalization
-		a[1]=89;
-		a[2]=56;
-		a[3]=32;
+		int[] a= new int[4];										// declaration,instantiation is done in this line
 		
-		int[] b = {12,13,14};										// declaration,initization and instantation in one line
+		a[0] = 30;												// initalization
+		a[1] = 40;
+		a[2] = 50;
+		a[3] = 60;
+		
+		
+		//Array Literals
+		int[] b = {12,13,14};										// declaration, initization and instantation in one line
 		int[] c = new int[] {34,35,36};
 		
 		
@@ -36,6 +46,7 @@ public class ArrayConcept {
 		System.out.println("Lowest Index "+0);
 		System.out.println("Highest Index is "+(a.length-1));
 		System.out.println("Length of array is "+a.length);
+		//System.out.println("Value at index is "+a[4]);                // ArrayIndexOutOfBoundException as we have only till 3 
 		
 		System.out.println("Lowest Index "+a[0]);					// 23
 		
@@ -55,7 +66,7 @@ public class ArrayConcept {
 		k[0]=55;
 		k[1]=66;
 		
-		System.out.println(k[2]);									// if we have space remaining inside arry it will stored with defualt value. 
+		System.out.println(k[2]);									// if we have space remaining inside array it will stored with default value. 
 		
 		//Double array
 		
@@ -63,6 +74,7 @@ public class ArrayConcept {
 		d[0]=23.56;
 		d[1]='a';
 		d[2]=46.78;
+		
 		
 		System.out.println(d);
 		
@@ -79,20 +91,21 @@ public class ArrayConcept {
 		c1[1]='b';
 		c1[2]='c';
 		
-		System.out.println("Character is "+c1[4]);
+		System.out.println("Character is "+c1[4]+"Space....");
 		
 		for(int x=0;x<c1.length;x++)
 		{
 			System.out.println("Index "+x+" has value "+c1[x]);
 		}
 		
+		// For Each loop applicable on Array and ArrayList
 		for(char ch : c1)
 		{
 			System.out.println(ch);
 		}
 		
 		
-		// Object Array :- It is used to store the data where datatype are not fixed. Eg:- employee details
+		// Object Array :- It is used to store the data where data type are not fixed. Eg:- employee details
 		
 		Object[] obj = new Object[4];
 		
@@ -105,6 +118,24 @@ public class ArrayConcept {
 		{
 			System.out.println(s);
 		}
+		
+		int[] arr = {56,902,23,7,10};
+		int[] newArr = Arrays.copyOf(arr, arr.length);
+		System.out.println(Arrays.toString(newArr));
+		
+		int[] copyOf = Arrays.copyOfRange(newArr, 1, 3);
+		System.out.println(Arrays.toString(copyOf));
+		
+		int[] a1 = new int[] {3,5,78,23};
+		int[] b1 = {3,4,5,6};
+		System.out.println(Arrays.equals(a1, 1, 2, b1, 1, 2));
+		
+		
+//		int[] arr1 = Arrays.sort(a1);
+//		
+//		Arrays.sort(arr1, Collections.reverseOrder());
+		
+		
 	}
 
 }

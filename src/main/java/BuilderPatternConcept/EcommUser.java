@@ -17,6 +17,9 @@ public class EcommUser {
 		
 		shop.doLogin().doPayment("PhonePay", "test@890").doLogout();
 		
+		int order = shop.doLogin().doSearch("Nike Shoes").generateOrderId();
+		System.out.println("Order is "+order);
+		
 		int orderId = shop.generateOrderId();
 	}
 

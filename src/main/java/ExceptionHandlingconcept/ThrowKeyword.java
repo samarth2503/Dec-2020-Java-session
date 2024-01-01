@@ -1,5 +1,6 @@
 package ExceptionHandlingconcept;
 
+// Throw Keyword :- Used for creating custom exception
 public class ThrowKeyword {
 
 	public static void main(String[] args) {

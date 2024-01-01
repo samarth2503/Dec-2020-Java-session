@@ -2,6 +2,7 @@ package ClassesandObject;
 
 public class Person {
 	
+	// Properties or variable act as template
 	String name;
 	String city;
 	int age;
